@@ -8,6 +8,8 @@ export default function Home({ breeds = [] }) {
 
   useEffect(() => {
     setBreedList(Object.keys(breeds));
+
+    fetch('/api/hello').then(res => console.log(res))
   }, []);
 
   return (
